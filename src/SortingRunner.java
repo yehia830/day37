@@ -11,27 +11,27 @@ public class SortingRunner {
         for (int currentMax = initialMax; currentMax >= 0; currentMax--) {
             for (int counter = 0; counter < currentMax - 1; counter++) {
                 if (arrayToSort[counter] > arrayToSort[counter + 1]) {
-                    swapNumbers(counter, counter + 1, arrayToSort);
+
                 }
             }
-            printNumbers(arrayToSort);
+
         }
     }
-    private static void swapNumbers(int i, int j, int[] array) {
-
-        int temp;
-        temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-
-    private static void printNumbers(int[] input) {
-
-        for (int i = 0; i < input.length; i++) {
-            System.out.print(input[i] + ", ");
-        }
-        System.out.println("\n");
-    }
+//    private static void swapNumbers(int i, int j, int[] array) {
+//
+//        int temp;
+//        temp = array[i];
+//        array[i] = array[j];
+//        array[j] = temp;
+//    }
+//
+//    private static void printNumbers(int[] input) {
+//
+//        for (int i = 0; i < input.length; i++) {
+//            System.out.print(input[i] + ", ");
+//        }
+//        System.out.println("\n");
+//    }
 
 
 }

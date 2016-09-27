@@ -1,22 +1,25 @@
 /**
  * Created by Yehia830 on 9/27/16.
  */
-public class SelectionSortRunner {
+public class SelectionSortRunner extends BaseSorter {
     public static void main(String[] args) {
 
     }
 
-    public void selectionSort(int[] selectionSortArray){
-        for(int current = 0; current < selectionSortArray.length-1; current++){
-            int index = current;
-            for(int counter = current + 1; counter < selectionSortArray.length; counter++)
-                if(selectionSortArray[counter] < selectionSortArray[index]){
-                    index = counter;
+    public void sort(int[] SelectionSortArray){
+        for( int i = 0; i<SelectionSortArray.length - 1; i++){
+            int min = i;
+            for (int j = i + 1; j < SelectionSortArray.length;j++){
+                if(SelectionSortArray[j] < SelectionSortArray[min]){
+                    min = j;
                 }
-            int smallerNumber = selectionSortArray[index];
-            selectionSortArray[index] = selectionSortArray[current];
-            selectionSortArray[current] = smallerNumber;
+                swapNumbers(i,j,SelectionSortArray);
+            }
+
+
         }
+
+
     }
 
 }

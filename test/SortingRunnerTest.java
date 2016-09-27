@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
  * Created by Yehia830 on 9/27/16.
  */
 public class SortingRunnerTest {
-    SortingRunner sortingRunner = new SortingRunner();
-    SelectionSortRunner selectionSortRunner = new SelectionSortRunner();
+    BaseSorter baseSorter = new BubbleSort();
+    BaseSorter baseSorter1 = new SelectionSortRunner();
     @Before
     public void setUp() throws Exception {
 
@@ -26,35 +26,35 @@ public class SortingRunnerTest {
     }
     private void assert4ElementOrder(int[] numArray){
         int[] orderedArray = {5, 7, 19,20};
-        selectionSortRunner.selectionSort(orderedArray);
+       baseSorter.sort(orderedArray);
         assert3ElementOrder(orderedArray);
 
         int[] orderedArray1 = {5, 19, 7,20};
-        sortingRunner.bubbleSort(orderedArray);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(orderedArray);
 
         int[] scrambledArray2 = {7, 5, 19,20};
-        sortingRunner.bubbleSort(scrambledArray2);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(scrambledArray2);
 
         int[] scrambledArray3 = {7, 19, 5,20};
-        sortingRunner.bubbleSort(scrambledArray3);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(scrambledArray3);
 
         int[] scrambledArray4 = {19, 7, 5,20};
-        sortingRunner.bubbleSort(scrambledArray4);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(scrambledArray4);
 
         int[] scrambledArray5 = {19, 5, 7,20};
-        sortingRunner.bubbleSort(scrambledArray5);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(scrambledArray5);
 
         int[] scrambledArray6 = {20,19, 5, 7};
-        sortingRunner.bubbleSort(scrambledArray5);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(scrambledArray5);
 
         int[] scrambledArray7 = {19,20, 5, 7};
-        sortingRunner.bubbleSort(scrambledArray5);
+        baseSorter.sort(orderedArray);
         assert3ElementOrder(scrambledArray5);
 
 
@@ -64,27 +64,27 @@ public class SortingRunnerTest {
     @Test
     public void bubbleSort3ElementArray() throws Exception {
         int[] orderedArray = {5, 7, 19};
-        sortingRunner.bubbleSort(orderedArray);
+        baseSorter1.sort(orderedArray);
         assert3ElementOrder(orderedArray);
 
         int[] scrambledArray1 = {5, 19, 7};
-        sortingRunner.bubbleSort(scrambledArray1);
+        baseSorter1.sort(orderedArray);
         assert3ElementOrder(scrambledArray1);
 
         int[] scrambledArray2 = {7, 5, 19};
-        sortingRunner.bubbleSort(scrambledArray2);
+        baseSorter1.sort(orderedArray);
         assert3ElementOrder(scrambledArray2);
 
         int[] scrambledArray3 = {7, 19, 5};
-        sortingRunner.bubbleSort(scrambledArray3);
+        baseSorter1.sort(orderedArray);
         assert3ElementOrder(scrambledArray3);
 
         int[] scrambledArray4 = {19, 7, 5};
-        sortingRunner.bubbleSort(scrambledArray4);
+        baseSorter1.sort(orderedArray);
         assert3ElementOrder(scrambledArray4);
 
         int[] scrambledArray5 = {19, 5, 7};
-        sortingRunner.bubbleSort(scrambledArray5);
+        baseSorter1.sort(orderedArray);
         assert3ElementOrder(scrambledArray5);
     }
 

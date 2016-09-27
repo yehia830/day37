@@ -6,6 +6,7 @@ public class Day37Runner {
         System.out.println("Running ...");
         Day37Runner runner = new Day37Runner();
         System.out.println(runner.recursionTest(0, 3));
+        System.out.println(runner.factorial(4));
     }
 
     public int recursionTest(int count, int max) {
@@ -15,6 +16,18 @@ public class Day37Runner {
         }
         return recursionTest(count+1,max);
     }
+
+    public int factorial(int fact) {
+        if(fact == 0 || fact == 1) {
+            return 1;
+        }
+        int result;
+        result = factorial(fact-1) * fact;
+
+        return result;
+    }
+
+    
 
 
 }
