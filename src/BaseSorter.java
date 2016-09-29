@@ -2,17 +2,17 @@
  * Created by Yehia830 on 9/27/16.
  */
 public abstract class BaseSorter implements TIYSortingInterface {
-    public static void swapNumbers(int i, int j, int[] array) {
-        int temp;
-        temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+    public void swapNumbers(int firstIndex, int secondIndex, int[] intArray) {
+        int firstNumber = intArray[firstIndex];
+        intArray[firstIndex] = intArray[secondIndex];
+        intArray[secondIndex] = firstNumber;
     }
 
-    private static void printNumbers(int[] input) {
-        for (int i = 0; i < input.length; i++) {
-            System.out.print(input[i] + ", ");
+    public void printNumbers(int[] numbers) {
+        for (int counter = 0; counter < numbers.length; counter++) {
+            System.out.print(numbers[counter] + " ");
         }
-        System.out.println("\n");
+        System.out.println();
     }
 }
+
